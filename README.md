@@ -1,70 +1,15 @@
-# Getting Started with Create React App
+The purpose of making this code is to solve a very simple problem in React.js. Rather than declaring all of our routes in the App.js you can declare your routes and link in the same file. So if you want to share the state between the component it will become easy otherwise you have to put all your state in App.js if you want to share it between components
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#How to use the code
 
-## Available Scripts
+Just grab the RoutingLibrary1 folder from the src folder. Import Browser component in the index.js and wrap your App component with Browser component. Now go to your App.js file and import Nestedroute and Link components from the RoutingLibrary1 folder. The Browser component which you used to wrap the App component is the hub component which will cause a re render if you click on any Link component in the App.js. Please make sure to add full path in the Link and Nestedroute component for example
 
-In the project directory, you can run:
+<Link to="/Comp1" />
+<Nestedroute link="/Comp1" element = {Comp1} />
 
-### `npm start`
+Now if you want to use more routes in Comp1 you should import another Browser component in App.js and wrap your Comp1 component with this Browser component. After this just go to your Comp1 file and import Link and Nestedroute components and declare your routes here. Now if you click on any Link in Comp1 the Browser which you used to wrap Comp1 will cause re render and now this Browser component is the hub for Links in Comp1. Make sure to give full path in Links and Nestedroutes in Comp1 for example
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<Link to="/Comp1/Comp3" />
+<Nestedroute link="/Comp1/Comp3" element = {Comp3} />
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thanks
