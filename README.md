@@ -15,3 +15,8 @@ Now if you want to use more routes in Comp1 you should import another Browser co
 You can see that only a specific Browser Component will cause the re render and after clicking on Link component the whole Application will not re render only a part of Application will re render.
 
 Thanks
+
+
+# See Our Latest Video Editor
+https://www.amooiz.com
+
